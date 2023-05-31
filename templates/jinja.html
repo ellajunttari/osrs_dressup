@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <title>OSRS Dress-up</title>
+    <style>
+        #clothing-form {
+            width: 300px;
+        }
+        label {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>OSRS Dress-up</h1>
+        <div class="form" id="clothing-form">
+            <form accept-charset="UTF-8" action="{{url_for("index")}}" method="post">
+                <p>
+                <label>Head<input name="head" type="text" value=""/></label>
+                <label>Cape<input name="cape" type="text" value=""/></label>
+                <label>Neck<input name="neck" type="text" value=""/></label>
+                <label>Ammo<input name="ammo" type="text" value=""/></label>
+                <label>Weapon<input name="weapon" type="text" value=""/></label>
+                <label>Shield<input name="shield" type="text" value=""/></label>
+                <label>Chest<input name="chest" type="text" value=""/></label>
+                <label>Legs<input name="legs" type="text" value=""/></label>
+                <label>Gloves<input name="gloves" type="text" value=""/></label>
+                <label>Boots<input name="boots" type="text" value=""/></label>
+                <label>Ring<input name="ring" type="text" value=""/></label>
+                <!-- Tässä on JSON-serialisoituna tallessa kaikki aiemmin lisätyt tuotteet  -->
+                <input type="hidden" name="tuotteet" value="" />
+                </p>
+                <p><input type="submit" value="Submit"/></p>
+            </form>
+        </div> 
+    </body>
+</html>
